@@ -1,15 +1,17 @@
 exports.email = {
-  method: "dev", // smtp in prod
+  method: "postmark",
   conf: {
-    host: ""
+    token: "Insert-Your-Postmark-App-Token",
+ 	sender: "mail@example.com"
   }
 };
+
 
 exports.db = "db://localhost/auth_server_dev";
 
 var server = exports.server = {
-  base_url: "http://localhost:7070",
-  port: 7070,
+  base_url: "http://RoamID.org",
+  port: 80,
 };
 
 var oauth2_server = exports.oauth2_server = {
